@@ -4,7 +4,6 @@ import "./Weather.css";
 
 import Weatherinfo from "./Weatherinfo";
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultcity);
   function handleResponse(response) {
@@ -15,7 +14,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
     });
