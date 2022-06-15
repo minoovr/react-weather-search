@@ -1,6 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
-import WeatherIcon from "./WeatherIcon";
+import WeatherIcon from "./weatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function Weatherinfo(props) {
